@@ -47,6 +47,13 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.restaurants',
     'apps.reservations',
+    'apps.orders',
+    'apps.payments',
+    'apps.reports',
+    'apps.notifications',
+    'apps.menu',
+    'apps.inventory',
+    'apps.kitchen',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +146,9 @@ AUTH_USER_MODEL = 'users.User'
 
 # Django REST Framework
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 

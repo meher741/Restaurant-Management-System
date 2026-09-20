@@ -23,6 +23,13 @@ urlpatterns = [
     path('api/users/', include('apps.users.urls')),
     path('api/restaurants/', include('apps.restaurants.urls')),
     path('api/reservations/', include('apps.reservations.urls')),
+    path('api/orders/', include('apps.orders.urls')),
+    path('api/menu/', include('apps.menu.urls')),
+    path('api/inventory/', include('apps.inventory.urls')),
+    path('api/kitchen/', include('apps.kitchen.urls')),
+    path('api/', include('apps.payments.urls')),
+    path('api/', include('apps.reports.urls')),
+    path('api/', include('apps.notifications.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
